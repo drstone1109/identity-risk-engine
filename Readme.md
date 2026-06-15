@@ -65,7 +65,7 @@ No external dependencies required for this prototype — pure Python standard li
 ## Team
 
 - Akshit (B.Tech CSE, TIET Patiala)
-- [Friend's name]
+- Hrishit Arora (B.Tech CSE,IIIT UNA)
 
 ## License
 
