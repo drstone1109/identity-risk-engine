@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Login Dashboard</title>
+<link rel="stylesheet" href="page-1.css">
+</head>
+<body>
+
+  <h1>Dashboard</h1>
+  <!--manually add new login attempt-->
+  <div class="form-card">
+    <h2>Add a login Data</h2>
+
+    <div class="form-grid">
+      <div>
+        <label for="userName">User name</label>
+        <input type="text" id="userName" placeholder="e.g. Hrishit">
+      </div>
+
+      <div>
+        <label for="device">Device</label>
+        <select id="device">
+          <option value="known">Known device</option>
+          <option value="new">New / unrecognised device</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="location">Login location (country)</label>
+        <input type="text" id="location" placeholder="e.g. India">
+      </div>
+
+      <div>
+        <label for="usualLocation">User's usual country</label>
+        <input type="text" id="usualLocation" placeholder="e.g. India">
+      </div>
+
+      <div>
+        <label for="loginHour">Login hour (0-23)</label>
+        <input type="number" id="loginHour" min="0" max="23" placeholder="e.g. 3">
+      </div>
+
+      <div>
+        <label for="failedAttempts">Failed attempts (last hour)</label>
+        <input type="number" id="failedAttempts" min="0" placeholder="e.g. 3">
+      </div>
+    </div>
+
+    <div class="form-checkboxes">
+      <label><input type="checkbox" id="isVPN"> Using VPN / proxy</label>
+      <button id="addLoginBtn">Add &amp; Score Login</button>
+    </div>
+  </div>
+
+  <!-- DASHBOARD TABLE-->
+  <table id="loginTable">
+    <thead>
+      <tr>
+        <th>User</th>
+        <th>Device</th>
+        <th>Location</th>
+        <th>Hour</th>
+        <th>Failed Attempts</th>
+        <th>Risk Score</th>
+        <th>Level</th>
+        <th>Explanation</th>
+      </tr>
+    </thead>
+    <tbody id="loginTableBody">
+      <!-- rows filled in by JavaScript,renderTable()-->
+    </tbody>
+  </table>
+
+  <script 
+    src="page-1.js">
+  </script>
+</body>
+</html>
